@@ -1,5 +1,7 @@
-
 function check() {
+  alert("버튼 작동!");
+
+  const brand = document.getElementById("brand").value;
   const brand = document.getElementById("brand").value;
   const text = document.getElementById("text").value;
   const image = document.getElementById("image").files.length;
