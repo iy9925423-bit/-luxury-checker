@@ -1,5 +1,27 @@
-function check(){
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정품 분석</title>
+</head>
 
-document.getElementById("result").innerHTML = "분석 완료";
+<body>
 
-}
+<h2>정품/가품 분석</h2>
+
+<input type="file" id="image">
+
+<br><br>
+
+<input type="text" id="brand" placeholder="브랜드">
+
+<br><br>
+
+<button onclick="check()">분석하기</button>
+
+<p id="result"></p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
