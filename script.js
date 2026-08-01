@@ -1,6 +1,5 @@
 function check(){
 
-document.getElementById("result").innerHTML =
-"분석 완료";
+document.getElementById("result").innerHTML = "분석 완료";
 
 }
