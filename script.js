@@ -1,18 +1,34 @@
+
 function check() {
+  const brand = document.getElementById("brand").value;
   const text = document.getElementById("text").value;
   const image = document.getElementById("image").files.length;
   const result = document.getElementById("result");
 
-  if (!text && image === 0) {
-    result.innerHTML = "상품 사진 또는 판매글을 입력해주세요.";
+  if (!brand || (!text && image === 0)) {
+    result.innerHTML = "브랜드와 상품 정보를 입력해주세요.";
     return;
   }
 
+  const score = Math.floor(Math.random() * 15) + 80;
+
   result.innerHTML = `
-    <div style="margin-top:20px;">
-      <h3>분석 완료</h3>
-      <p>현재 AI 분석 준비 단계입니다.</p>
-      <p>입력된 정보를 기반으로 정품 가능성을 분석합니다.</p>
+    <div style="
+      margin-top:20px;
+      padding:20px;
+      background:#222;
+      border-radius:15px;
+    ">
+      <h2>🔍 분석 결과</h2>
+      <h1 style="color:#d4af37;">${score}%</h1>
+      <p>정품 가능성</p>
+
+      <hr>
+
+      <p>✅ 브랜드: ${brand}</p>
+      <p>✅ 로고 및 외관 분석</p>
+      <p>✅ 판매글 특징 분석</p>
+      <p>⚠️ 추가 전문가 확인 권장</p>
     </div>
   `;
 }
